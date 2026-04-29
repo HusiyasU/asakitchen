@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Asa's Kitchen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="nav-logo">🌿</span>
+      <span class="nav-title">Asa's Kitchen</span>
+    </div>
+    <button class="nav-toggle" id="navToggle">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="reservasi.html">Reservasi</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+      <li><a href="tentang.html">Tentang Kami</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Menu <em style="font-style:italic; color:var(--sage-dark)">Kami</em></h1>
+    <p>Setiap hidangan diramu dengan bahan pilihan dan cinta yang tulus — untuk pengalaman makan yang tak terlupakan</p>
+  </div>
+
+  <section class="section">
+    <div class="menu-tabs">
+      <button class="tab-btn active" data-tab="semua">Semua</button>
+      <button class="tab-btn" data-tab="pembuka">Pembuka</button>
+      <button class="tab-btn" data-tab="utama">Makanan Utama</button>
+      <button class="tab-btn" data-tab="dessert">Dessert</button>
+      <button class="tab-btn" data-tab="minuman">Minuman</button>
+    </div>
+
+    <!-- SEMUA / PEMBUKA -->
+    <div class="menu-category visible" id="tab-semua">
+      <!-- Pembuka -->
+      <div class="card" data-cat="pembuka">
+        <div class="card-img-wrap">
+          <div class="card-img" style="background: linear-gradient(135deg,#e8f5e9,#a5c8a1)">🥗</div>
+          <span class="card-badge new">Baru</span>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Pembuka</div>
+          <h3 class="card-title">Salad Damai</h3>
+          <p class="card-desc">Campuran sayur segar dengan dressing yuzu madu dan topping quinoa renyah.</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 38.000</span>
+            <button class="card-btn" onclick="addToOrder(this, 'Salad Damai')">Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-cat="pembuka">
+        <div class="card-img-wrap">
+          <div class="card-img" style="background: linear-gradient(135deg,#fff8e1,#ffe0a0)">🍱</div>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Pembuka</div>
+          <h3 class="card-title">Gyoza Sage</h3>
+          <p class="card-desc">Dumpling panggang isi ayam dan daun bawang dengan saus ponzu spesial.</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 42.000</span>
+            <button class="card-btn" onclick="addToOrder(this, 'Gyoza Sage')">Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-cat="pembuka">
+        <div class="card-img-wrap">
+          <div class="card-img" style="background: linear-gradient(135deg,#fce4ec,#f48fb1)">🥣</div>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Pembuka</div>
+          <h3 class="card-title">Sup Jamur Truffle</h3>
+          <p class="card-desc">Sup krim jamur campuran dengan tetes minyak truffle dan roti artisanal hangat.</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 55.000</span>
+            <button class="card-btn" onclick="addToOrder(this, 'Sup Jamur Truffle')">Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Makanan Utama -->
+      <div class="card" data-cat="utama">
+        <div class="card-img-wrap">
+          <div class="card-img" style="background: linear-gradient(135deg,#f9e4c8,#f2c97e)">🍜</div>
+          <span class="card-badge">Terlaris</span>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Makanan Utama</div>
+          <h3 class="card-title">Ramen Harapan</h3>
+          <p class="card-desc">Kuah kaldu sapi 12 jam dengan mie artisanal, telur ajitsuke, dan toping nori segar.</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 58.000</span>
+            <button class="card-btn" onclick="addToOrder(this, 'Ramen Harapan')">Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-cat="utama">
+        <div class="card-img-wrap">
+          <div class="card-img" style="background: linear-gradient(135deg,#e8f0e9,#7fa882)">🍛</div>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Makanan Utama</div>
+          <h3 class="card-title">Nasi Daun Pandan</h3>
+          <p class="card-desc">Nasi gurih pandan dengan ayam kecap spesial, tempe bacem, dan sambal hijau.</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 52.000</span>
+            <button class="card-btn" onclick="addToOrder(this, 'Nasi Daun Pandan')">Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-cat="utama">
+        <div class="card-img-wrap">
+          <div class="card-img" style="background: linear-gradient(135deg,#f3e5f5,#ce93d8)">🍝</div>
+          <span class="card-badge new">Baru</span>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Makanan Utama</div>
+          <h3 class="card-title">Pasta Sage Cream</h3>
+          <p class="card-desc">Fettuccine dengan saus krim daun sage, jamur porcini, dan parmesan aged.</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 68.000</span>
+            <button class="card-btn" onclick="addToOrder(this, 'Pasta Sage Cream')">Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dessert -->
+      <div class="card" data-cat="dessert">
+        <div class="card-img-wrap">
+          <div class="card-img" style="background: linear-gradient(135deg,#fce4ec,#f48fb1)">🍰</div>
+          <span class="card-badge">Favorit</span>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Dessert</div>
+          <h3 class="card-title">Matcha Lava Cake</h3>
+          <p class="card-desc">Kue lava matcha premium dengan es krim vanilla dan saus strawberry segar.</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 45.000</span>
+            <button class="card-btn" onclick="addToOrder(this, 'Matcha Lava Cake')">Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-cat="dessert">
+        <div class="card-img-wrap">
+          <div class="card-img" style="background: linear-gradient(135deg,#e3f2fd,#90caf9)">🍮</div>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Dessert</div>
+          <h3 class="card-title">Pudding Lavender</h3>
+          <p class="card-desc">Pudding susu dengan infusi lavender segar, topping beri campuran, dan madu.</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 35.000</span>
+            <button class="card-btn" onclick="addToOrder(this, 'Pudding Lavender')">Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Minuman -->
+      <div class="card" data-cat="minuman">
+        <div class="card-img-wrap">
+          <div class="card-img" style="background: linear-gradient(135deg,#fff8e1,#ffe082)">🍵</div>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Minuman</div>
+          <h3 class="card-title">Hojicha Latte</h3>
+          <p class="card-desc">Teh hojicha panggang asal Kyoto dengan susu oat segar dan foam hazel ringan.</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 32.000</span>
+            <button class="card-btn" onclick="addToOrder(this, 'Hojicha Latte')">Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-cat="minuman">
+        <div class="card-img-wrap">
+          <div class="card-img" style="background: linear-gradient(135deg,#e8f5e9,#81c784)">🧋</div>
+          <span class="card-badge new">Baru</span>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Minuman</div>
+          <h3 class="card-title">Matcha Yuzu Fizz</h3>
+          <p class="card-desc">Matcha soda segar dengan peras yuzu asli dan splash air karbonasi premium.</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 38.000</span>
+            <button class="card-btn" onclick="addToOrder(this, 'Matcha Yuzu Fizz')">Pesan</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-cat="minuman">
+        <div class="card-img-wrap">
+          <div class="card-img" style="background: linear-gradient(135deg,#fce4ec,#f06292)">🍹</div>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Minuman</div>
+          <h3 class="card-title">Rose Hibiscus Tea</h3>
+          <p class="card-desc">Teh hibiscus dingin dengan infusi mawar segar, madu lemon, dan daun mint.</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 28.000</span>
+            <button class="card-btn" onclick="addToOrder(this, 'Rose Hibiscus Tea')">Pesan</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filtered categories -->
+    <div class="menu-category" id="tab-pembuka"></div>
+    <div class="menu-category" id="tab-utama"></div>
+    <div class="menu-category" id="tab-dessert"></div>
+    <div class="menu-category" id="tab-minuman"></div>
+  </section>
+
+  <!-- Order counter badge -->
+  <div class="order-badge" id="orderBadge" style="display:none">
+    🛒 <span id="orderCount">0</span> item dipilih
+    <a href="reservasi.html" style="margin-left:0.8rem; font-weight:500; color:var(--gold); text-decoration:underline">Lanjut Reservasi →</a>
+  </div>
+
+  <footer class="footer">
+    <p>© 2024 Asa's Kitchen · Dibuat dengan 🌿 dan kasih sayang</p>
+  </footer>
+
+  <style>
+    .order-badge {
+      position: fixed;
+      bottom: 1.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--ink);
+      color: var(--white);
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      z-index: 999;
+      white-space: nowrap;
+      animation: slideUp 0.4s ease;
+    }
+    @keyframes slideUp { from { opacity:0; transform: translateX(-50%) translateY(20px); } }
+  </style>
+
+  <script src="main.js"></script>
+  <script>
+    // Tab filtering
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const tab = btn.dataset.tab;
+
+        document.getElementById('tab-semua').classList.remove('visible');
+
+        const filtered = ['pembuka','utama','dessert','minuman'];
+        filtered.forEach(c => document.getElementById('tab-' + c).classList.remove('visible'));
+
+        if (tab === 'semua') {
+          document.getElementById('tab-semua').classList.add('visible');
+        } else {
+          const el = document.getElementById('tab-' + tab);
+          const allCards = document.querySelectorAll('#tab-semua .card');
+          el.innerHTML = '';
+          allCards.forEach(card => {
+            if (card.dataset.cat === tab) {
+              el.appendChild(card.cloneNode(true));
+            }
+          });
+          // Re-attach click events
+          el.querySelectorAll('.card-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+              addToOrder(this, this.closest('.card').querySelector('.card-title').textContent);
+            });
+          });
+          el.classList.add('visible');
+        }
+      });
+    });
+
+    let orderCount = 0;
+    function addToOrder(btn, name) {
+      orderCount++;
+      document.getElementById('orderCount').textContent = orderCount;
+      document.getElementById('orderBadge').style.display = 'flex';
+      btn.textContent = '✓ Ditambah';
+      btn.style.background = 'var(--sage)';
+      btn.style.color = 'var(--white)';
+      setTimeout(() => { btn.textContent = 'Pesan'; btn.style.background = ''; btn.style.color = ''; }, 2000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Asa's Kitchen — Menu Restoran Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">
+      <span class="nav-logo">🌿</span>
+      <span class="nav-title">Asa's Kitchen</span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Beranda</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="reservasi.html">Reservasi</a></li>
+      <li><a href="kontak.html">Kontak</a></li>
+      <li><a href="tentang.html">Tentang Kami</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">Buka Setiap Hari · 10:00 – 22:00</div>
+    <h1 class="hero-title">Rasa yang<br><em>Bertahan</em> di Hati</h1>
+    <p class="hero-sub">Sajian hangat penuh perasaan, seperti kenangan yang tak bisa dilupakan. Dimasak dengan niat tulus — untuk mereka yang ingin benar-benar makan dengan damai.</p>
+    <div class="hero-cta">
+      <a href="menu.html" class="btn-primary">Lihat Menu</a>
+      <a href="reservasi.html" class="btn-outline">Buat Reservasi</a>
+    </div>
+    <div class="hero-deco deco-leaf">🍃</div>
+    <div class="hero-deco deco-flower">🌸</div>
+  </section>
+
+  <!-- FEATURED SECTION -->
+  <section class="section featured">
+    <div class="section-header">
+      <span class="section-tag">Pilihan Spesial</span>
+      <h2>Menu Unggulan Kami</h2>
+      <p>Hidangan terpopuler yang selalu dinantikan pelanggan setia kami</p>
+    </div>
+
+    <div class="cards-flex">
+      <div class="card">
+        <div class="card-img-wrap">
+          <div class="card-img" style="background: linear-gradient(135deg, #f9e4c8 0%, #f2c97e 100%);">🍜</div>
+          <span class="card-badge">Terlaris</span>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Makanan Utama</div>
+          <h3 class="card-title">Ramen Harapan</h3>
+          <p class="card-desc">Kuah kaldu sapi 12 jam dengan mie artisanal, telur ajitsuke, dan toping nori segar.</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 58.000</span>
+            <a href="menu.html" class="card-btn">Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrap">
+          <div class="card-img" style="background: linear-gradient(135deg, #e8f5e9 0%, #a5c8a1 100%);">🥗</div>
+          <span class="card-badge new">Baru</span>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Pembuka</div>
+          <h3 class="card-title">Salad Damai</h3>
+          <p class="card-desc">Campuran sayur segar dengan dressing yuzu madu dan topping quinoa renyah.</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 38.000</span>
+            <a href="menu.html" class="card-btn">Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrap">
+          <div class="card-img" style="background: linear-gradient(135deg, #fce4ec 0%, #f48fb1 100%);">🍰</div>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Dessert</div>
+          <h3 class="card-title">Matcha Lava Cake</h3>
+          <p class="card-desc">Kue lava matcha premium dengan es krim vanilla dan saus strawberry segar.</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 45.000</span>
+            <a href="menu.html" class="card-btn">Pesan</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img-wrap">
+          <div class="card-img" style="background: linear-gradient(135deg, #fff8e1 0%, #ffe082 100%);">🍵</div>
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Minuman</div>
+          <h3 class="card-title">Hojicha Latte</h3>
+          <p class="card-desc">Teh hojicha panggang asal Kyoto dengan susu oat segar dan foam hazel ringan.</p>
+          <div class="card-footer">
+            <span class="card-price">Rp 32.000</span>
+            <a href="menu.html" class="card-btn">Pesan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE BANNER -->
+  <section class="quote-banner">
+    <blockquote>
+      "Makanan bukan sekadar nutrisi — ia adalah cara kita berkata <em>aku peduli</em> tanpa kata-kata."
+    </blockquote>
+    <cite>— Asa, Pendiri Restoran</cite>
+  </section>
+
+  <!-- INFO STRIP -->
+  <section class="info-strip">
+    <div class="info-item">
+      <span class="info-icon">📍</span>
+      <div>
+        <strong>Lokasi</strong>
+        <p>Jl. Chainsaw No. 4B, Jakarta Selatan</p>
+      </div>
+    </div>
+    <div class="info-item">
+      <span class="info-icon">⏰</span>
+      <div>
+        <strong>Jam Buka</strong>
+        <p>Setiap Hari 10:00 – 22:00</p>
+      </div>
+    </div>
+    <div class="info-item">
+      <span class="info-icon">📞</span>
+      <div>
+        <strong>Telepon</strong>
+        <p>+62 812-3456-7890</p>
+      </div>
+    </div>
+    <div class="info-item">
+      <span class="info-icon">📧</span>
+      <div>
+        <strong>Email</strong>
+        <p>hello@asakitchen.id</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2024 Asa's Kitchen · Dibuat dengan 🌿 dan kasih sayang</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
